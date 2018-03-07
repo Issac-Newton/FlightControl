@@ -136,6 +136,10 @@ public:
         spinBox_2 = new QSpinBox(groupBox_4);
         spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
         spinBox_2->setGeometry(QRect(350, 60, 42, 22));
+		QObject::connect(horizontalSlider, SIGNAL(valueChanged(int)), spinBox, SLOT(setValue(int)));
+		QObject::connect(spinBox,SIGNAL(valueChanged(int)),horizontalSlider,SLOT(setValue(int)));
+		QObject::connect(horizontalSlider_2, SIGNAL(valueChanged(int)), spinBox_2, SLOT(setValue(int)));
+		QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), horizontalSlider_2, SLOT(setValue(int)));
         radioButton = new QRadioButton(groupBox_4);
         radioButton->setObjectName(QStringLiteral("radioButton"));
         radioButton->setGeometry(QRect(420, 40, 89, 16));
@@ -177,6 +181,11 @@ public:
         spinBox_6 = new QSpinBox(groupBox_6);
         spinBox_6->setObjectName(QStringLiteral("spinBox_6"));
         spinBox_6->setGeometry(QRect(350, 60, 42, 22));
+		QObject::connect(horizontalSlider_5, SIGNAL(valueChanged(int)), spinBox_5, SLOT(setValue(int)));
+		QObject::connect(spinBox_5,SIGNAL(valueChanged(int)),horizontalSlider_5,SLOT(setValue(int)));
+		QObject::connect(horizontalSlider_6, SIGNAL(valueChanged(int)), spinBox_6, SLOT(setValue(int)));
+		QObject::connect(spinBox_6,SIGNAL(valueChanged(int)),horizontalSlider_6,SLOT(setValue(int)));
+
         radioButton_3 = new QRadioButton(groupBox_6);
         radioButton_3->setObjectName(QStringLiteral("radioButton_3"));
         radioButton_3->setGeometry(QRect(420, 40, 89, 16));
@@ -218,6 +227,10 @@ public:
         spinBox_12 = new QSpinBox(groupBox_7);
         spinBox_12->setObjectName(QStringLiteral("spinBox_12"));
         spinBox_12->setGeometry(QRect(350, 60, 42, 22));
+		QObject::connect(horizontalSlider_11, SIGNAL(valueChanged(int)), spinBox_11, SLOT(setValue(int)));
+		QObject::connect(spinBox_11, SIGNAL(valueChanged(int)), horizontalSlider_11, SLOT(setValue(int)));
+		QObject::connect(horizontalSlider_12, SIGNAL(valueChanged(int)), spinBox_12, SLOT(setValue(int)));
+		QObject::connect(spinBox_12, SIGNAL(valueChanged(int)), horizontalSlider_12, SLOT(setValue(int)));
         radioButton_6 = new QRadioButton(groupBox_7);
         radioButton_6->setObjectName(QStringLiteral("radioButton_6"));
         radioButton_6->setGeometry(QRect(420, 40, 89, 16));
@@ -259,6 +272,10 @@ public:
         spinBox_10 = new QSpinBox(groupBox_5);
         spinBox_10->setObjectName(QStringLiteral("spinBox_10"));
         spinBox_10->setGeometry(QRect(350, 60, 42, 22));
+		QObject::connect(horizontalSlider_9, SIGNAL(valueChanged(int)), spinBox_9, SLOT(setValue(int)));
+		QObject::connect(spinBox_9, SIGNAL(valueChanged(int)), horizontalSlider_9, SLOT(setValue(int)));
+		QObject::connect(horizontalSlider_10, SIGNAL(valueChanged(int)), spinBox_10, SLOT(setValue(int)));
+		QObject::connect(spinBox_10, SIGNAL(valueChanged(int)), horizontalSlider_10, SLOT(setValue(int)));
         radioButton_5 = new QRadioButton(groupBox_5);
         radioButton_5->setObjectName(QStringLiteral("radioButton_5"));
         radioButton_5->setGeometry(QRect(420, 40, 89, 16));

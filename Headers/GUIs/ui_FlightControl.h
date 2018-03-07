@@ -109,6 +109,8 @@ public:
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         groupBox->setGeometry(QRect(60, 30, 721, 231));
+        groupBox->setStyleSheet(QLatin1String("background-color:rgb(197,193,170);\n"
+"font: 75 13pt \"Constantia\";"));
         gridLayoutWidget = new QWidget(groupBox);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
         gridLayoutWidget->setGeometry(QRect(10, 20, 661, 191));
@@ -400,6 +402,8 @@ public:
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
         groupBox_2->setGeometry(QRect(70, 290, 661, 191));
+        groupBox_2->setStyleSheet(QLatin1String("background-color:rgb(204,204,204);\n"
+"font: 75 13pt \"Constantia\";"));
         FlightControlClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(FlightControlClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -419,11 +423,10 @@ public:
 
     void retranslateUi(QMainWindow *FlightControlClass)
     {
-		//±³¾°Í¼
         FlightControlClass->setWindowTitle(QApplication::translate("FlightControlClass", "FlightControl", Q_NULLPTR));
 		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(FlightControlClass->size());
-		QPalette palette(FlightControlClass->palette());
-		palette.setBrush(QPalette::Background,QBrush(pixmap));
+		QPalette palette(FlightControlClass->palette());   
+		palette.setBrush(QPalette::Background, QBrush(pixmap));
 		FlightControlClass->setPalette(palette);
 
         pushButton->setText(QApplication::translate("FlightControlClass", "ServoSet", Q_NULLPTR));
@@ -460,7 +463,7 @@ public:
         label_27->setText(QString());
         label_28->setText(QString());
         label_24->setText(QApplication::translate("FlightControlClass", "Yaw", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("FlightControlClass", "Flight states", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("FlightControlClass", "Flight States", Q_NULLPTR));
     } // retranslateUi
 
 };

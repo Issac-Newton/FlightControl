@@ -101,13 +101,25 @@ public:
         groupBox_3 = new QGroupBox(verticalLayoutWidget);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         groupBox_3->setFlat(true);
+		//step
         horizontalSlider = new QSlider(groupBox_3);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
         horizontalSlider->setGeometry(QRect(40, 40, 321, 31));
         horizontalSlider->setOrientation(Qt::Horizontal);
+		horizontalSlider->setMinimum(0);
+		horizontalSlider->setMaximum(100);
+		horizontalSlider->setValue(50);       
+		horizontalSlider->setSingleStep(1);
+
         spinBox = new QSpinBox(groupBox_3);
         spinBox->setObjectName(QStringLiteral("spinBox"));
         spinBox->setGeometry(QRect(410, 49, 61, 21));
+		spinBox->setMinimum(0);
+		spinBox->setMaximum(100);
+		spinBox->setValue(50);
+		spinBox->setSingleStep(1);
+		QObject::connect(horizontalSlider,SIGNAL(valueChanged(int)),spinBox,SLOT(setValue(int)));
+		QObject::connect(spinBox,SIGNAL(valueChanged(int)),horizontalSlider,SLOT(setValue(int)));
 
         verticalLayout->addWidget(groupBox_3);
 
@@ -118,10 +130,21 @@ public:
         horizontalSlider_2->setObjectName(QStringLiteral("horizontalSlider_2"));
         horizontalSlider_2->setGeometry(QRect(40, 41, 321, 31));
         horizontalSlider_2->setOrientation(Qt::Horizontal);
+
+		horizontalSlider_2->setMinimum(10);
+		horizontalSlider_2->setMaximum(100);
+		horizontalSlider_2->setValue(50);
+		horizontalSlider_2->setSingleStep(1);
+
         spinBox_2 = new QSpinBox(groupBox);
         spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
         spinBox_2->setGeometry(QRect(410, 40, 61, 21));
-
+		spinBox_2->setMinimum(10);
+		spinBox_2->setMaximum(100);
+		spinBox_2->setValue(50);
+		spinBox_2->setSingleStep(1);
+		QObject::connect(horizontalSlider_2,SIGNAL(valueChanged(int)),spinBox_2,SLOT(setValue(int)));
+		QObject::connect(spinBox_2,SIGNAL(valueChanged(int)),horizontalSlider_2,SLOT(setValue(int)));
         verticalLayout->addWidget(groupBox);
 
         MainWindowPara->setCentralWidget(centralwidget);

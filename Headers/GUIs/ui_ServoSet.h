@@ -216,6 +216,7 @@ public:
         horizontalSlider = new QSlider(verticalLayoutWidget);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
         horizontalSlider->setOrientation(Qt::Horizontal);
+		horizontalSlider->setMinimum(100);
 
         horizontalLayout->addWidget(horizontalSlider);
 
@@ -224,7 +225,8 @@ public:
         spinBox->setMinimum(100);
         spinBox->setMaximum(100000);
         spinBox->setValue(333);
-
+		QObject::connect(horizontalSlider,SIGNAL(valueChanged(int)),spinBox,SLOT(setValue(int)));
+		QObject::connect(spinBox,SIGNAL(valueChanged(int)),horizontalSlider,SLOT(setValue(int)));
         horizontalLayout->addWidget(spinBox);
 
 
