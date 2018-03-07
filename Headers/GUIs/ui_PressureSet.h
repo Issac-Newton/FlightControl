@@ -106,6 +106,11 @@ public:
     void retranslateUi(QMainWindow *MainWindowPre)
     {
         MainWindowPre->setWindowTitle(QApplication::translate("MainWindowPre", "Mode Choose", Q_NULLPTR));
+		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(MainWindowPre->size());
+		QPalette palette(MainWindowPre->palette());
+		palette.setBrush(QPalette::Background, QBrush(pixmap));
+		MainWindowPre->setPalette(palette);
+
         pushButton->setText(QApplication::translate("MainWindowPre", "Monitor", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindowPre", "ServoSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindowPre", "RangeSet", Q_NULLPTR));

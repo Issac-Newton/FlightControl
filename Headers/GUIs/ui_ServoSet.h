@@ -213,14 +213,10 @@ public:
 
         horizontalLayout->addWidget(line_2);
 
-		//进度条和微调框
         horizontalSlider = new QSlider(verticalLayoutWidget);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
         horizontalSlider->setOrientation(Qt::Horizontal);
-		horizontalSlider->setMinimum(100);
-		horizontalSlider->setMaximum(100000);
-		horizontalSlider->setValue(333);
-		horizontalSlider->setSingleStep(1);
+
         horizontalLayout->addWidget(horizontalSlider);
 
         spinBox = new QSpinBox(verticalLayoutWidget);
@@ -228,12 +224,9 @@ public:
         spinBox->setMinimum(100);
         spinBox->setMaximum(100000);
         spinBox->setValue(333);
-		spinBox->setSingleStep(1);
 
         horizontalLayout->addWidget(spinBox);
-		QObject::connect(horizontalSlider,SIGNAL(valueChanged(int)),spinBox,SLOT(setValue(int)));
-		QObject::connect(spinBox,SIGNAL(valueChanged(int)),horizontalSlider,SLOT(setValue(int)));
-		//*****************************************
+
 
         verticalLayout->addLayout(horizontalLayout);
 
@@ -254,6 +247,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Servo Set", Q_NULLPTR));
+		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(MainWindow->size());
+		QPalette palette(MainWindow->palette());
+		palette.setBrush(QPalette::Background, QBrush(pixmap));
+		MainWindow->setPalette(palette);
+
         pushButton->setText(QApplication::translate("MainWindow", "Monitor", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindow", "RangeSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindow", "Mode", Q_NULLPTR));
@@ -265,7 +263,6 @@ public:
          << QApplication::translate("MainWindow", "Analog", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Digital", Q_NULLPTR)
         );
-
         label_2->setText(QApplication::translate("MainWindow", "Servo Parameters", Q_NULLPTR));
 #ifndef QT_NO_WHATSTHIS
         label_4->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>", Q_NULLPTR));

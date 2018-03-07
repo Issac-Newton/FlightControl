@@ -274,6 +274,11 @@ public:
     void retranslateUi(QWidget *Form)
     {
         Form->setWindowTitle(QApplication::translate("Form", "Action Range Set", Q_NULLPTR));
+		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(Form->size());
+		QPalette palette(Form->palette());
+		palette.setBrush(QPalette::Background, QBrush(pixmap));
+		Form->setPalette(palette);
+
         pushButton->setText(QApplication::translate("Form", "Monitor", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("Form", "ServoSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("Form", "Mode", Q_NULLPTR));

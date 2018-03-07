@@ -119,6 +119,11 @@ public:
     void retranslateUi(QMainWindow *MainWindowMore)
     {
         MainWindowMore->setWindowTitle(QApplication::translate("MainWindowMore", "More Function", Q_NULLPTR));
+		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(MainWindowMore->size());
+		QPalette palette(MainWindowMore->palette());
+		palette.setBrush(QPalette::Background, QBrush(pixmap));
+		MainWindowMore->setPalette(palette);
+
         pushButton->setText(QApplication::translate("MainWindowMore", "Monitor", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindowMore", "ServoSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindowMore", "RangeSet", Q_NULLPTR));

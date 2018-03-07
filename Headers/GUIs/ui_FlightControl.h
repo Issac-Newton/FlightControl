@@ -419,7 +419,13 @@ public:
 
     void retranslateUi(QMainWindow *FlightControlClass)
     {
+		//±³¾°Í¼
         FlightControlClass->setWindowTitle(QApplication::translate("FlightControlClass", "FlightControl", Q_NULLPTR));
+		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(FlightControlClass->size());
+		QPalette palette(FlightControlClass->palette());
+		palette.setBrush(QPalette::Background,QBrush(pixmap));
+		FlightControlClass->setPalette(palette);
+
         pushButton->setText(QApplication::translate("FlightControlClass", "ServoSet", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("FlightControlClass", "RangeSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("FlightControlClass", "Mode", Q_NULLPTR));
