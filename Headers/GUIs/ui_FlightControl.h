@@ -23,6 +23,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -80,6 +81,8 @@ public:
     QLabel *label_28;
     QLabel *label_24;
     QGroupBox *groupBox_2;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -93,22 +96,22 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(810, 40, 81, 41));
+        pushButton->setGeometry(QRect(810, 20, 91, 51));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(810, 120, 81, 41));
+        pushButton_2->setGeometry(QRect(810, 120, 91, 51));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(810, 200, 81, 41));
+        pushButton_3->setGeometry(QRect(810, 220, 91, 51));
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(810, 280, 81, 41));
+        pushButton_4->setGeometry(QRect(810, 320, 91, 51));
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(810, 360, 81, 41));
+        pushButton_5->setGeometry(QRect(810, 420, 91, 51));
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(60, 30, 721, 231));
+        groupBox->setGeometry(QRect(60, 20, 721, 231));
         groupBox->setStyleSheet(QLatin1String("background-color:rgb(197,193,170);\n"
 "font: 75 13pt \"Constantia\";"));
         gridLayoutWidget = new QWidget(groupBox);
@@ -401,9 +404,17 @@ public:
 
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(70, 290, 661, 191));
+        groupBox_2->setGeometry(QRect(60, 270, 721, 271));
         groupBox_2->setStyleSheet(QLatin1String("background-color:rgb(204,204,204);\n"
 "font: 75 13pt \"Constantia\";"));
+        verticalLayoutWidget = new QWidget(groupBox_2);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(10, 29, 701, 211));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         FlightControlClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(FlightControlClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -424,46 +435,41 @@ public:
     void retranslateUi(QMainWindow *FlightControlClass)
     {
         FlightControlClass->setWindowTitle(QApplication::translate("FlightControlClass", "FlightControl", Q_NULLPTR));
-		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(FlightControlClass->size());
-		QPalette palette(FlightControlClass->palette());   
-		palette.setBrush(QPalette::Background, QBrush(pixmap));
-		FlightControlClass->setPalette(palette);
-
         pushButton->setText(QApplication::translate("FlightControlClass", "ServoSet", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("FlightControlClass", "RangeSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("FlightControlClass", "Mode", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("FlightControlClass", "ParaSet", Q_NULLPTR));
         pushButton_5->setText(QApplication::translate("FlightControlClass", "More", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("FlightControlClass", "Flight Data", Q_NULLPTR));
-        label_7->setText(QString());
-        label_5->setText(QString());
+        label_7->setText(QApplication::translate("FlightControlClass", "990", Q_NULLPTR));
+        label_5->setText(QApplication::translate("FlightControlClass", "990", Q_NULLPTR));
         label_17->setText(QApplication::translate("FlightControlClass", "Accele_X", Q_NULLPTR));
-        label_21->setText(QString());
-        label_6->setText(QString());
-        label_8->setText(QString());
-        label_22->setText(QString());
+        label_21->setText(QApplication::translate("FlightControlClass", "  0", Q_NULLPTR));
+        label_6->setText(QApplication::translate("FlightControlClass", "990", Q_NULLPTR));
+        label_8->setText(QApplication::translate("FlightControlClass", "990", Q_NULLPTR));
+        label_22->setText(QApplication::translate("FlightControlClass", "   0", Q_NULLPTR));
         label_3->setText(QApplication::translate("FlightControlClass", "Servo3PWM", Q_NULLPTR));
         label_2->setText(QApplication::translate("FlightControlClass", "Servo2PWM", Q_NULLPTR));
         label->setText(QApplication::translate("FlightControlClass", "Servo1PWM", Q_NULLPTR));
         label_4->setText(QApplication::translate("FlightControlClass", "Servo4PWM", Q_NULLPTR));
         label_23->setText(QApplication::translate("FlightControlClass", "Roll", Q_NULLPTR));
-        label_15->setText(QString());
-        label_14->setText(QString());
+        label_15->setText(QApplication::translate("FlightControlClass", "  0", Q_NULLPTR));
+        label_14->setText(QApplication::translate("FlightControlClass", "  0", Q_NULLPTR));
         label_9->setText(QApplication::translate("FlightControlClass", "Pressure1", Q_NULLPTR));
         label_10->setText(QApplication::translate("FlightControlClass", "Pressure2", Q_NULLPTR));
         label_11->setText(QApplication::translate("FlightControlClass", "Pressure3", Q_NULLPTR));
         label_18->setText(QApplication::translate("FlightControlClass", "Accele_Y", Q_NULLPTR));
-        label_20->setText(QString());
+        label_20->setText(QApplication::translate("FlightControlClass", "   0", Q_NULLPTR));
         label_19->setText(QApplication::translate("FlightControlClass", "Accele_Z", Q_NULLPTR));
         label_12->setText(QApplication::translate("FlightControlClass", "Pressure4", Q_NULLPTR));
-        label_13->setText(QString());
-        label_16->setText(QString());
+        label_13->setText(QApplication::translate("FlightControlClass", "  0", Q_NULLPTR));
+        label_16->setText(QApplication::translate("FlightControlClass", "  0", Q_NULLPTR));
         label_25->setText(QApplication::translate("FlightControlClass", "Pitch", Q_NULLPTR));
-        label_26->setText(QString());
-        label_27->setText(QString());
-        label_28->setText(QString());
+        label_26->setText(QApplication::translate("FlightControlClass", "   0", Q_NULLPTR));
+        label_27->setText(QApplication::translate("FlightControlClass", "   0", Q_NULLPTR));
+        label_28->setText(QApplication::translate("FlightControlClass", "   0", Q_NULLPTR));
         label_24->setText(QApplication::translate("FlightControlClass", "Yaw", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("FlightControlClass", "Flight States", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("FlightControlClass", " Shake Detection ", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -53,5 +53,6 @@ int main(int argc, char *argv[])
 	QObject::connect(&more,SIGNAL(more_to_para()),&paraset,SLOT(paraSet()));
 
 	w.show();
+	w.setWindowIcon(QIcon("fly.png"));
 	return a.exec();
 }

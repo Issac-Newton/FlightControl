@@ -53,52 +53,64 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(810, 40, 81, 41));
+        pushButton->setGeometry(QRect(810, 20, 91, 51));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(810, 120, 81, 41));
+        pushButton_2->setGeometry(QRect(810, 120, 91, 51));
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(810, 200, 81, 41));
+        pushButton_3->setGeometry(QRect(810, 220, 91, 51));
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(810, 280, 81, 41));
+        pushButton_4->setGeometry(QRect(810, 320, 91, 51));
         pushButton_5 = new QPushButton(centralwidget);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(810, 360, 81, 41));
+        pushButton_5->setGeometry(QRect(810, 420, 91, 51));
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(100, 20, 591, 501));
+        verticalLayoutWidget->setGeometry(QRect(100, -20, 571, 551));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(verticalLayoutWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setStyleSheet(QStringLiteral("font: 87 12pt \"Segoe UI Black\";"));
+        label->setStyleSheet(QStringLiteral("font: 87 14pt \"Segoe UI Black\";"));
 
         verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter);
 
         groupBox_3 = new QGroupBox(verticalLayoutWidget);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        groupBox_3->setStyleSheet(QStringLiteral("font: 10pt \"Fixedsys\";"));
+        groupBox_3->setStyleSheet(QLatin1String("border:2px solid #080808;\n"
+"border-radius:25px;\n"
+"font: 11pt \"Fixedsys\";\n"
+"          background:#EEE9BF;"));
 
         verticalLayout_2->addWidget(groupBox_3);
 
         groupBox_2 = new QGroupBox(verticalLayoutWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setStyleSheet(QStringLiteral("font: 10pt \"Fixedsys\";"));
+        groupBox_2->setStyleSheet(QLatin1String("border:2px solid #080808;\n"
+"border-radius:25px;\n"
+"font: 11pt \"Fixedsys\";\n"
+"          background:#EEE9BF;"));
 
         verticalLayout_2->addWidget(groupBox_2);
 
         groupBox_4 = new QGroupBox(verticalLayoutWidget);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        groupBox_4->setStyleSheet(QStringLiteral("font: 10pt \"Fixedsys\";"));
+        groupBox_4->setStyleSheet(QLatin1String("border:2px solid #080808;\n"
+"border-radius:25px;\n"
+"font: 11pt \"Fixedsys\";\n"
+"          background:#EEE9BF;"));
 
         verticalLayout_2->addWidget(groupBox_4);
 
         groupBox = new QGroupBox(verticalLayoutWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setStyleSheet(QStringLiteral("font: 10pt \"Fixedsys\";"));
+        groupBox->setStyleSheet(QLatin1String("border:2px solid #080808;\n"
+"border-radius:25px;\n"
+"font: 11pt \"Fixedsys\";\n"
+"          background:#EEE9BF;"));
 
         verticalLayout_2->addWidget(groupBox);
 
@@ -119,21 +131,17 @@ public:
     void retranslateUi(QMainWindow *MainWindowMore)
     {
         MainWindowMore->setWindowTitle(QApplication::translate("MainWindowMore", "More Function", Q_NULLPTR));
-		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(MainWindowMore->size());
-		QPalette palette(MainWindowMore->palette());
-		palette.setBrush(QPalette::Background, QBrush(pixmap));
-		MainWindowMore->setPalette(palette);
-
         pushButton->setText(QApplication::translate("MainWindowMore", "Monitor", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindowMore", "ServoSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindowMore", "RangeSet", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindowMore", "Mode", Q_NULLPTR));
         pushButton_5->setText(QApplication::translate("MainWindowMore", "ParaSet", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindowMore", "More Function", Q_NULLPTR));
-        groupBox_3->setTitle(QApplication::translate("MainWindowMore", "Distance Sensor", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("MainWindowMore", "Fault Detection", Q_NULLPTR));
-        groupBox_4->setTitle(QApplication::translate("MainWindowMore", "No Landing", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("MainWindowMore", "False Safe", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindowMore", "\n"
+"More Function", Q_NULLPTR));
+        groupBox_3->setTitle(QApplication::translate("MainWindowMore", " Distance Sensor ", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("MainWindowMore", " Fault Detection ", Q_NULLPTR));
+        groupBox_4->setTitle(QApplication::translate("MainWindowMore", " No Landing ", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("MainWindowMore", " False Safe ", Q_NULLPTR));
     } // retranslateUi
 
 };

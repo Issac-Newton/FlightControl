@@ -38,8 +38,10 @@ public:
     QVBoxLayout *verticalLayout;
     QGroupBox *groupBox;
     QLabel *label;
+    QPushButton *pushButton_6;
     QGroupBox *groupBox_2;
     QLabel *label_2;
+    QPushButton *pushButton_7;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -52,19 +54,19 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(810, 40, 81, 41));
+        pushButton->setGeometry(QRect(810, 20, 91, 51));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(810, 120, 81, 41));
+        pushButton_2->setGeometry(QRect(810, 120, 91, 51));
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(810, 200, 81, 41));
+        pushButton_3->setGeometry(QRect(810, 220, 91, 51));
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(810, 280, 81, 41));
+        pushButton_4->setGeometry(QRect(810, 320, 91, 51));
         pushButton_5 = new QPushButton(centralwidget);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(810, 360, 81, 41));
+        pushButton_5->setGeometry(QRect(810, 420, 91, 51));
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(120, 70, 581, 391));
@@ -77,6 +79,12 @@ public:
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(50, 50, 471, 21));
+        pushButton_6 = new QPushButton(groupBox);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setGeometry(QRect(190, 100, 171, 61));
+        pushButton_6->setStyleSheet(QLatin1String("border:5px solid black;\n"
+"font: 75 18pt \"Calibri\";\n"
+"border-radius:20px;"));
 
         verticalLayout->addWidget(groupBox);
 
@@ -86,6 +94,12 @@ public:
         label_2 = new QLabel(groupBox_2);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(40, 50, 471, 21));
+        pushButton_7 = new QPushButton(groupBox_2);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        pushButton_7->setGeometry(QRect(200, 100, 171, 61));
+        pushButton_7->setStyleSheet(QLatin1String("border:5px solid black;\n"
+"font: 75 18pt \"Calibri\";\n"
+"border-radius:20px;"));
 
         verticalLayout->addWidget(groupBox_2);
 
@@ -106,11 +120,6 @@ public:
     void retranslateUi(QMainWindow *MainWindowPre)
     {
         MainWindowPre->setWindowTitle(QApplication::translate("MainWindowPre", "Mode Choose", Q_NULLPTR));
-		QPixmap pixmap = QPixmap("Grey1.jpg").scaled(MainWindowPre->size());
-		QPalette palette(MainWindowPre->palette());
-		palette.setBrush(QPalette::Background, QBrush(pixmap));
-		MainWindowPre->setPalette(palette);
-
         pushButton->setText(QApplication::translate("MainWindowPre", "Monitor", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindowPre", "ServoSet", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindowPre", "RangeSet", Q_NULLPTR));
@@ -118,8 +127,10 @@ public:
         pushButton_5->setText(QApplication::translate("MainWindowPre", "More", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("MainWindowPre", "Special Landing Test", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindowPre", "The mode is for Craft's one leg broken,test three legs landing function.", Q_NULLPTR));
+        pushButton_6->setText(QApplication::translate("MainWindowPre", "Start", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("MainWindowPre", "Hard Landing Protection", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindowPre", "The mode is for testing Craft's hand landing protection.", Q_NULLPTR));
+        pushButton_7->setText(QApplication::translate("MainWindowPre", "Start", Q_NULLPTR));
     } // retranslateUi
 
 };
